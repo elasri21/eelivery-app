@@ -1,0 +1,136 @@
+footer {
+    background-color: $footer-bg;
+    .container {
+        .useful-links {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            .apps {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .logo {
+                    margin-bottom: 20px;
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 3px;
+                        font-size: 30px;
+                        font-weight: 500;
+                        color: $white;
+                    }
+                }
+                .app {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    border: 1px solid $white;
+                    border-radius: 10px;
+                    padding: 10px 30px;
+                    background-color: $app-bg;
+                    transition: .4s;
+                    &:hover {
+                        background-color: $main-red;
+                        border-color: $main-red;
+                    }
+                    i {
+                        font-size: 25px;
+                        color: $white;
+                    }
+                    .info {
+                        span {
+                            font-size: 14px;
+                            font-weight: 300;
+                            color: $text-c;
+                        }
+                        h3 {
+                            font-size: 20px;
+                            color: $white;
+                            text-transform: capitalize;
+                            margin: 0 !important;
+                        }
+                    }
+                }
+            }
+            .link {
+                h3 {
+                    color: $white;
+                    font-size: 30px;
+                    font-weight: 600;
+                }
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    li {
+                        a {
+                            font-size: 16px;
+                            font-weight: 400;
+                            text-transform: capitalize;
+                            color: $white;
+                            &:hover {
+                                color: $main-red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .copy-right {
+            padding-top: 30px;
+            border-top: 1px solid $text-c;
+            p {
+                text-align: center;
+                color: $white;
+                margin: 0 !important;
+                a {
+                    font-size: 20px;
+                    color: $white;
+                    font-weight: 500;
+                    &:hover {
+                        color: $main-red;
+                    }
+                }
+            }
+        }
+        .go-up {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            background-color: $main-red;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            overflow: hidden;
+            i {
+                position: relative;
+                font-size: 20px;
+                color: $white;
+            }
+            &::before {
+                content: "";
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 6px;
+                background-color: $bg-hover;
+                transition: .4s;
+            }
+            &:hover {
+                &::before {
+                    width: 200%;
+                    height: 200%;
+                }
+            }
+        }
+    }
+}
